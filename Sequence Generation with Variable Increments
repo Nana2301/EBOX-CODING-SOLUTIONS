@@ -1,0 +1,15 @@
+def generate_series(n):
+    term = 21  # Starting term
+    difference = 4  # Initial difference
+    series = []
+
+    for _ in range(n):
+        series.append(term)  # Append the current term
+        term += difference   # Update the term by adding the current difference
+        difference *= 2      # Double the difference for the next term
+
+    print(" ".join(map(str, series)))
+
+# Input number of terms
+n = int(input("Enter the number of terms: "))
+generate_series(n)
