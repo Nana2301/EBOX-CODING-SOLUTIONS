@@ -1,0 +1,16 @@
+def vietnam_flag(n):
+    # Calculate center index
+    center = n // 2
+
+    for i in range(n):
+        for j in range(n):
+            # Place '*' at the center, '~' everywhere else
+            if i == center and j == center:
+                print('*', end=' ')
+            else:
+                print('~', end=' ')
+        print()  # Move to the next row after each line is printed
+
+# Input for the size of the flag
+n = int(input("Enter an odd integer for the flag size: "))
+vietnam_flag(n)
