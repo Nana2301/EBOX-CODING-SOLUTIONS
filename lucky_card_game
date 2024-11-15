@@ -1,0 +1,27 @@
+def lucky_card_game():
+    # Multiplier dictionary
+    multipliers = {"R": 10, "Q": 10, "P": 7, "S": 5}
+    arun_score, arya_score = 0, 0
+
+    print("Enter number of time player can flip the card")
+    n = int(input().strip())
+
+    for i in range(n):
+        print("Arun flip the card")
+        arun_card_type = input().strip()
+        arun_card_number = int(input().strip())
+        arun_score += arun_card_number * multipliers[arun_card_type]
+
+        print("Arya flip the card")
+        arya_card_type = input().strip()
+        arya_card_number = int(input().strip())
+        arya_score += arya_card_number * multipliers[arya_card_type]
+
+    # Display final total scores only once
+    print(f"Total scores {arun_score} {arya_score}")
+    if arun_score > arya_score:
+        print("Arun won the game")
+    elif arya_score > arun_score:
+        print("Arya won the game")
+    else:
+        print("Game tied")
